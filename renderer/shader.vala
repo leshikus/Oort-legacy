@@ -77,7 +77,7 @@ class Oort.ShaderProgram {
 			glGetProgramiv(id, GL_INFO_LOG_LENGTH, out log_length);
 			var log = new uint8[log_length];
 			glGetProgramInfoLog(id, log_length, &log_length, (string)log);
-			throw new ShaderError.LINK_FAILED("Failed to link shader program %s:\n%s", name, log);
+			throw new ShaderError.LINK_FAILED("Failed to link shader program %s:\n$((string)log)", name);
 		}
 	}
 

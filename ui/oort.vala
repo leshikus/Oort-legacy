@@ -15,15 +15,15 @@ namespace Oort {
 	class MenuBuilder : GLib.Object {
 		public delegate void MenuAction();
 		public void leaf(MenuShell parent, string label, MenuAction action) {
-			var item = new MenuItem.with_mnemonic(label);
+			var item = new Gtk.MenuItem.with_mnemonic(label);
 			parent.append(item);
 			item.activate.connect((widget) => action());
 		}
 
 		public delegate void MenuBuilder(MenuShell parent);
 		public void menu(MenuShell parent, string label, MenuBuilder builder) {
-			var item = new MenuItem.with_mnemonic(label);
-			var menu = new Menu();
+			var item = new Gtk.MenuItem.with_mnemonic(label);
+			var menu = new Gtk.Menu();
 			item.set_submenu(menu);
 			parent.append(item);
 			builder(menu);
@@ -204,7 +204,7 @@ namespace Oort {
 				single_step = false;
 			}
 
-			Timeout.add(0, after_tick);
+			Gtk.Timeout.add(0, after_tick);
 
 			return true;
 		}
@@ -486,7 +486,7 @@ namespace Oort {
 
 		public void stop_game() {
 			shutting_down = true;
-			ticker.join();
+			//ticker.join();
 			ticker = null;
 			shutting_down = false;
 			game = null;

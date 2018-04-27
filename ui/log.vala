@@ -33,7 +33,7 @@ namespace Oort {
 			} else if (ship != null && ship.dead) {
 				ship = null;
 				buf.get_end_iter(out iter);
-				buf.insert(iter, "(dead)", -1);
+				buf.insert(ref iter, "(dead)", -1);
 			} else {
 				var head = ship.get_logbuf_head();
 				for (; cursor <= head; cursor++) {
@@ -42,9 +42,9 @@ namespace Oort {
 						continue;
 					}
 					buf.get_end_iter(out iter);
-					buf.insert(iter, e, -1);
+					buf.insert(ref iter, e, -1);
 					buf.get_end_iter(out iter);
-					buf.insert(iter, "\n", 1);
+					buf.insert(ref iter, "\n", 1);
 				}
 			}
 		}

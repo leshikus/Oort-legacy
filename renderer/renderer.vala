@@ -31,13 +31,13 @@ namespace Oort {
 		public static void static_init() {
 			Oort.Ship.gfx_create_cb = on_ship_created;
 
-			/*
+/*
 			print("Vendor: %s\n", glGetString(GL_VENDOR));
 			print("Renderer: %s\n", glGetString(GL_RENDERER));
 			print("GL Version: %s\n", glGetString(GL_VERSION));
-			//print("GLSL Version: %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
+			print("GLSL Version: %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
 			print("Extensions:\n%s\n", glGetString(GL_EXTENSIONS));
-			*/
+*/
 		}
 
 		public Renderer(Game game,
