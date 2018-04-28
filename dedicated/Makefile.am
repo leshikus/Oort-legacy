@@ -21,9 +21,9 @@ AM_VALAFLAGS = \
 	--vapidir $(top_srcdir)/sim \
 	$(NULL)
 
-LIBS=$(OORT_LIBS) -lm
+LIBS=$(OORT_LIBS) -lm -ldl
 
 bin_PROGRAMS = oort_dedicated
 oort_dedicated_SOURCES = oort-dedicated.vala
 oort_dedicated_LDADD = $(top_srcdir)/sim/libsim.a $(CJSON_LDADD) $(LUA_LDADD)
-oort_dedicated_LDFLAGS = $(OORT_EXTRA_LDFLAGS)
+oort_dedicated_LDFLAGS = $(OORT_EXTRA_LDFLAGS) 

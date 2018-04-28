@@ -13,7 +13,7 @@ AM_CFLAGS = \
 	$(LUA_CFLAGS) \
 	$(NULL)
 
-LIBS = $(OORT_LIBS) $(OORT_UI_LIBS) -lm
+LIBS = $(OORT_LIBS) $(OORT_UI_LIBS) -lm -ldl
 
 AM_VALAFLAGS = \
 	--pkg oort \

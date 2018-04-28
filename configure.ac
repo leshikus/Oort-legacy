@@ -25,7 +25,7 @@ AC_PROG_RANLIB
 AM_PROG_VALAC([0.12.0])
 
 LUA_IDIR=/usr/include/luajit-2.0
-LUA_LDADD='/usr/lib/x86_64-linux-gnu/libluajit-5.1.a -ldl'
+LUA_LDADD='/usr/lib/x86_64-linux-gnu/libluajit-5.1.a'
 LUA_CFLAGS='-I $(LUA_IDIR)'
 AC_SUBST(LUA_IDIR)
 AC_SUBST(LUA_LDADD)
